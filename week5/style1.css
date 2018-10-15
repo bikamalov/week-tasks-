@@ -1,0 +1,18 @@
+#matrix{
+  display:flex;
+  width:300px;
+  flex-wrap:wrap;
+}
+#matrix input{
+  width:80px;
+  padding:5px;
+  font-size:24px;
+}
+#result{
+  font-size:24px;
+  color:red;
+}
+#determinant{
+  font-size:24px;
+  color:green;
+}
