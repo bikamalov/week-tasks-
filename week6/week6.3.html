@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+		#cars{
+		  display:flex;
+		  flex-wrap:wrap;
+		}
+		.card{
+		  position:relative;
+		  width:100px;
+		  margin:5px;
+		}
+		.card .basket{
+		  background-color:white;
+		  position:absolute;
+		  right:5px;
+		  top:5px;
+		  z-index:9;
+		}
+		#insideBasket{
+		  border:1px solid red;
+		  text-align:center;
+		}
+	</style>
+    <script src="script3.js" defer></script>
+  </head>
+
+  <body>
+    <div id="insideBasket"><span id="items">0</span> items, total: <span id="sum">0</span>$</div>
+    <div id="cars">
+      
+    </div>
+  </body>
+
+</html>
