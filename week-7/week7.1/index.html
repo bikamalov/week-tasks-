@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport">Load Sport news</button>
+<button id="politics">Load Politics news</button>
+<button id="bussiness">Load Bussiness news</button>
+
+
+<script>
+
+// bussiness
+function bussiness(){
+path1 = "http://demo4296963.mockable.io/news-bussiness";
+let news = document.querySelector("#news");
+news.innerHTML = "";
+function onTextReady(text) {
+ 	var lines = text.split("\n");
+ 	for(let i = 0;i<lines.length;i++){
+ 		console.log(lines[i]);
+ 		news.insertAdjacentHTML( 'beforeend', lines[i] );
+ 	}
+
+}
+function onResponse(response) {
+	return response.text();
+}
+fetch(path1)
+ .then(onResponse)
+ .then(onTextReady);
+}
+// bussiness
+function sport(){
+
+path1 = "http://demo4296963.mockable.io/news-sport";
+let news = document.querySelector("#news");
+news.innerHTML = "";
+function onTextReady(text) {
+ 	var lines = text.split("\n");
+ 	for(let i = 0;i<lines.length;i++){
+ 		console.log(lines[i]);
+ 		news.insertAdjacentHTML( 'beforeend', lines[i] );
+ 		
+ 	}
+
+}
+function onResponse(response) {
+	return response.text();
+}
+fetch(path1)
+ .then(onResponse)
+ .then(onTextReady);
+}
+// bussiness
+function politics(){
+path1 = "http://demo4296963.mockable.io/news-politics";
+let news = document.querySelector("#news");
+news.innerHTML = "";
+function onTextReady(text) {
+ 	var lines = text.split("\n");
+ 	for(let i = 0;i<lines.length;i++){
+ 		console.log(lines[i]);
+ 		news.insertAdjacentHTML( 'beforeend', lines[i] );
+ 		
+ 	}
+
+}
+function onResponse(response) {
+	return response.text();
+}
+fetch(path1)
+ .then(onResponse)
+ .then(onTextReady);
+}
+document.querySelector("#sport").addEventListener("click",sport);
+document.querySelector("#politics").addEventListener("click",politics);
+document.querySelector("#bussiness").addEventListener("click",bussiness);
+</script>
+</body>
+</html>

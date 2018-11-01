@@ -1,0 +1,9 @@
+table, td, th {
+    border: 1px solid red;
+}
+table{
+    border-collapse: collapse;
+}
+.price{
+	font-weight: bold;
+}
